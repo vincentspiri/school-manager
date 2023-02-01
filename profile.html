@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management Software</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="myschedule.html">
+                <img src="images/sblogo.png" alt="" width="40" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="myschedule.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Classes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Times</a></li>
+                            <li><a class="dropdown-item" href="#">Manage Classes</a></li>
+                            <li><a class="dropdown-item" href="#">Monthly Schedule</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class=" btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    id="profile-dropdown">
+                    <img src="images/sblogo.png" alt="" width="40" height="40">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown">
+                    <li><a class="dropdown-item active" href="#">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">My Schedule</a></li>
+                    <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container my-5 w-75">
+            <h2>My Profile</h2>
+            <hr>
+            <span>
+                <a href="">Change Password</a> |
+                <a href="">Settings and My School Rules</a>
+            </span>
+            <div class="row my-5 column-gap-3">
+                <div class="col p-3 text-center" style="background-color: #f5f6fa">
+                    <img class="img-responsive" src="images/sblogo.png" alt="sblogo">
+                    <h4>Vincent Spiri</h4>
+                    <span>vincespiri@yahoo.com</span>
+                    <div class="mb-3 mt-4">
+                        <h4 class="text-primary">Profile Picture</h3>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+                <div class="col-9 p-3" style="background-color: #f5f6fa">
+                    <h3 class="text-primary">Personal Info</h3>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" aria-describedby="profileName"
+                                placeholder="Enter full name">
+                        </div>
+                        <div class="col">
+                            <label for="profileEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="profileEmail" aria-describedby="emailAdd"
+                                placeholder="Enter email ID">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="phoneNum" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phoneNum" aria-describedby="phoneNumber"
+                                placeholder="Enter phone number">
+                        </div>
+                        <div class="col">
+                            <label for="birthDate" class="form-label">Birthday</label>
+                            <input class="form-control" type="date" id="birthDate">
+                        </div>
+                    </div>
+                    <!--Address-->
+                    <h3 class="text-primary mt-4">Address</h3>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="profileStreet" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="profileStreet" aria-describedby="streetAdd"
+                                placeholder="Enter address">
+                        </div>
+                        <div class="col">
+                            <label for="profileCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="profileCity" aria-describedby="cityAdd"
+                                placeholder="Enter city">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="profileState" class="form-label">Prefecture</label>
+                            <input type="text" class="form-control" id="profileState" aria-describedby="stateAdd"
+                                placeholder="Enter prefecture">
+                        </div>
+                        <div class="col">
+                            <label for="profileZip" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="profileZip" aria-describedby="zipAdd"
+                                placeholder="Enter postal code">
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary mt-4">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
